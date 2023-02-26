@@ -1,0 +1,4 @@
+footer.navbar {
+    position: sticky;
+    top: 100vh;
+}

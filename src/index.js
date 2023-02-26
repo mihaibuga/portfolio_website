@@ -1,15 +1,25 @@
-import React, { StrictMode } from 'react';
-import { render } from 'react-dom';
+import React, { StrictMode } from "react";
+import { render } from "react-dom";
+
+import "./index.css";
+
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
 
 const App = () => {
-  return <>
-    <p>The application has been cleaned up of the files I'll never use</p>
-  </>
-}
+    return (
+        <>
+            <Header />
+            <Home />
+            <Footer />
+        </>
+    );
+};
 
 render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  document.getElementById('root')
+    <StrictMode>
+        <App />
+    </StrictMode>,
+    document.getElementById("root")
 );
