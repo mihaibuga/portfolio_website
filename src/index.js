@@ -2,7 +2,7 @@ import React, { StrictMode } from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./index.css";
+import "./index.scss";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
