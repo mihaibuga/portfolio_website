@@ -1,14 +1,12 @@
-import { useEffect } from "react";
+import Layout from "../components/Layout";
 
 const Home = () => {
-    useEffect(() => {
-        document.title = "Home";
-    }, []);
-
     return (
-        <div className="container">
-            <h1>Homepage</h1>
-        </div>
+        <Layout title="Home">
+            <div className="container">
+                <h1>Homepage</h1>
+            </div>
+        </Layout>
     );
 };
 

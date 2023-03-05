@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
+import Layout from "../components/Layout";
 
 const NotFound = () => {
-    useEffect(() => {
-        document.title = 'Page Not Found';
-    }, []);
-
     return (
-        <div className='container'>
-            <h1>404</h1>
-            <p>Not found</p>
-        </div>
+        <Layout title="Page Not Found">
+            <div className="container">
+                <h1>404</h1>
+                <p>Not found</p>
+            </div>
+        </Layout>
     );
 };
 
