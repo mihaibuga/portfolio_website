@@ -5,7 +5,7 @@ const Home = () => {
         document.title = "Home";
     }, []);
 
-    return <main className="container">This is now the homepage</main>;
+    return <h1>This is now the homepage</h1>;
 };
 
 export default Home;
