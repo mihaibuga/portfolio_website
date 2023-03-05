@@ -1,9 +1,10 @@
-import "./footer.css";
+import "./footer.scss";
 
 const Footer = () => {
     const year = new Date().getFullYear();
+
     return (
-        <footer className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <footer>
             <div className="container">
                 <span className="navbar-text">&copy; {year}</span>
             </div>

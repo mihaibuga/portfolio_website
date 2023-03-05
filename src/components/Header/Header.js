@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "./header.scss";
+
 const Header = () => {
     return (
         <header className="navbar navbar-expand-lg navbar-dark bg-dark">
