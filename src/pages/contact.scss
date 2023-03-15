@@ -1,0 +1,225 @@
+.contact-card {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    overflow: hidden;
+    width: 100%;
+
+    .top {
+        background-color: #1d1e22;
+        color: #f9feff; //egg shell
+        padding: 10px 20px;
+    }
+
+    .bottom {
+        display: flex;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        > .left {
+            background-color: #38342e;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 50%;
+            padding: 40px;
+
+            .image-wrapper {
+                border-radius: 20% 40% 40% 20%;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+
+        > .right {
+            background-color: #8f8c80;
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+            .icon-label-link {
+                background-color: #38342e;
+                border-radius: 15px;
+                color: #f9feff;
+                overflow: hidden;
+                width: 80%;
+
+                > :hover {
+                    background-color: #323232;
+                }
+
+                > a {
+                    .inner-container {
+                        column-gap: 20px;
+                        display: flex;
+                        padding: 10px;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+
+                        > .left {
+                            height: 90px;
+                            width: 90px;
+
+                            .icon-wrapper {
+                                height: 100%;
+                                overflow: hidden;
+                                width: 100%;
+
+                                img {
+                                    border-radius: 50%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+
+                        > .right {
+                            word-wrap: normal;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+
+                            .label {
+                                font-size: 24px;
+                                font-weight: 600;
+                                line-height: 28px;
+                                margin-bottom: 6px;
+                            }
+
+                            .link {
+                                font-size: 18px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-card {
+        .bottom {
+            > .left {
+                align-items: center;
+                display: flex;
+                min-width: unset;
+                padding: 20px 10px;
+                width: 30%;
+
+                .image-wrapper {
+                    height: fit-content;
+                    margin: 0 auto;
+
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            > .right {
+                width: 70%;
+                padding: 20px 10px;
+
+                .icon-label-link {
+                    background-color: #38342e;
+                    border-radius: 15px;
+                    color: #f9feff;
+                    overflow: hidden;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        .bottom {
+            flex-direction: column;
+
+            > .left {
+                display: grid;
+                width: 100%;
+
+                .image-wrapper {
+                    border-radius: 10% 50% 50%;
+                    height: 100%;
+                    max-height: 250px;
+
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            > .right {
+                width: 100%;
+
+                .icon-label-link {
+                    width: 100%;
+
+                    > a {
+                        .inner-container {
+                            > .left {
+                                height: unset;
+                                width: unset;
+                                display: flex;
+                                align-items: center;
+                                min-width: 40px;
+                                max-width: 40px;
+
+                                .icon-wrapper {
+                                    border-radius: unset;
+                                    height: fit-content;
+
+                                    img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .contact-card {
+        .bottom {
+            > .right {
+                .icon-label-link {
+                    > a {
+                        .inner-container {
+                            flex-direction: column;
+                            > .left {
+                                .icon-wrapper {
+                                    img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
