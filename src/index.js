@@ -1,6 +1,7 @@
 import React, { StrictMode } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import * as ROUTES from './constants/routes';
 
 import "./index.scss";
 
@@ -11,9 +12,9 @@ import NotFound from "./pages/NotFound";
 const App = () => {
     return (
         <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route exact path="/projects" element={<Projects />}></Route>
-            <Route path="*" element={<NotFound />}></Route>
+            <Route exact path={ROUTES.LANDING} element={<Home />}></Route>
+            <Route exact path={ROUTES.PROJECTS} element={<Projects />}></Route>
+            <Route path={ROUTES.ANY} element={<NotFound />}></Route>
         </Routes>
     );
 };

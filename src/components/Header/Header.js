@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import * as ROUTES from "../../constants/routes";
 
 import "./header.scss";
 
@@ -10,10 +11,10 @@ const Header = () => {
                     Portfolio Website
                 </Link>
                 <nav>
-                    <Link className="nav-link" aria-current="page" to="/">
+                    <Link className="nav-link" aria-current="page" to={ROUTES.LANDING}>
                         Home
                     </Link>
-                    <Link className="nav-link" aria-current="page" to="/projects">
+                    <Link className="nav-link" aria-current="page" to={ROUTES.PROJECTS}>
                         Projects
                     </Link>
                 </nav>
