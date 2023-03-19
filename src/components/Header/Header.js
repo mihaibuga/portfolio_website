@@ -1,25 +1,48 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 
 import "./header.scss";
 
 const Header = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleNavbarToggle = () => {
+        setShowMenu(!showMenu);
+    }
+
+    const handleNavDisplayOnResize = () => {
+        setShowMenu(false);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleNavDisplayOnResize);
+        return () => {
+          window.removeEventListener('resize', handleNavDisplayOnResize)
+        }
+      }, [])
+
     return (
         <header>
             <div className="container">
-                <Link className="navbar-brand" to="/">
+                <NavLink className="navbar-brand" to="/">
                     Portfolio Website
-                </Link>
-                <nav>
-                    <Link className="nav-link" aria-current="page" to={ROUTES.LANDING}>
+                </NavLink>
+                <button className={`menu-toggle${showMenu ? ' toggled' : ''}`} onClick={handleNavbarToggle}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav className={`nav-elements${showMenu ? ' active' : ''}`}>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.LANDING}>
                         Home
-                    </Link>
-                    <Link className="nav-link" aria-current="page" to={ROUTES.PROJECTS}>
+                    </NavLink>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PROJECTS}>
                         Projects
-                    </Link>
-                    <Link className="nav-link" aria-current="page" to={ROUTES.CONTACT}>
+                    </NavLink>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.CONTACT}>
                         Contact
-                    </Link>
+                    </NavLink>
                 </nav>
             </div>
         </header>

@@ -1,3 +1,5 @@
+@import "../variables";
+
 .contact-card {
     border-radius: 25px;
     display: flex;
@@ -7,8 +9,8 @@
     width: 100%;
 
     .top {
-        background-color: #1d1e22;
-        color: #f9feff; //egg shell
+        background-color: $main-dark;
+        color: $egg-shell;
         padding: 10px 20px;
     }
 
@@ -25,7 +27,7 @@
         }
 
         > .left {
-            background-color: #38342e;
+            background-color: $dark-grey-bg;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -41,7 +43,7 @@
         }
 
         > .right {
-            background-color: #8f8c80;
+            background-color: $light-grey-bg;
             display: flex;
             width: 50%;
             flex-direction: column;
@@ -54,14 +56,14 @@
             box-sizing: border-box;
 
             .icon-label-link {
-                background-color: #38342e;
+                background-color: $dark-grey-bg;
                 border-radius: 15px;
-                color: #f9feff;
+                color: $egg-shell;
                 overflow: hidden;
                 width: 80%;
 
                 > :hover {
-                    background-color: #323232;
+                    background-color: $darker-grey-bg;
                 }
 
                 > a {
@@ -139,9 +141,9 @@
                 padding: 20px 10px;
 
                 .icon-label-link {
-                    background-color: #38342e;
+                    background-color: $dark-grey-bg;
                     border-radius: 15px;
-                    color: #f9feff;
+                    color: $egg-shell;
                     overflow: hidden;
                     width: 80%;
                 }
