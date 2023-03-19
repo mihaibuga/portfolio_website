@@ -1,11 +1,11 @@
 @import "../../variables";
 
 header {
-    background-color: #1d1e22;
-    color: #f9feff;
+    background-color: $main-dark;
+    color: $egg-shell;
     padding-top: 30px;
     padding-bottom: 30px;
-    box-shadow: 0px 5px 0px #404040;
+    box-shadow: 0px 5px 0px $shadow-grey;
 
     .container {
         align-items: center;
@@ -48,7 +48,7 @@ header {
             }
 
             span {
-                background-color: #f9feff;
+                background-color: $egg-shell;
                 border-radius: 3px;
                 display: block;
                 height: 4px;
@@ -87,7 +87,7 @@ header {
                 transition: all 0.5s;
 
                 &:hover {
-                    color: #c5aa6a;
+                    color: $golden;
                     transition: all 0.5s;
 
                     &::after {
@@ -104,13 +104,13 @@ header {
                     width: 0%;
                     content: ".";
                     color: transparent;
-                    background-color: #7c5c11;
+                    background-color: $darker-golden;
                     height: 2px;
                     transition: all 0.5s;
                 }
 
                 &.active {
-                    color: #c5aa6a;
+                    color: $golden;
                     font-weight: 600;
 
                     &::after {
@@ -130,7 +130,7 @@ header {
             }
 
             .nav-elements {
-                background-color: #1d1e22;
+                background-color: $main-dark;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
