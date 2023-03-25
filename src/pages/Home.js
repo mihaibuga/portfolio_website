@@ -10,7 +10,6 @@ import {
     FaPhp,
     FaFigma
 } from "react-icons/fa";
-
 import {SiJavascript, SiCsharp} from "react-icons/si";
 import {TbBrandVscode} from "react-icons/tb";
 
@@ -30,7 +29,7 @@ const Home = () => {
                 <div className="inner-wrapper container">
                     <div className="content-wrapper centered reduced">
                         <h1>
-                            <span>Welcome!</span> <span>I'm Mihai.</span>
+                            <span>Welcome!</span> <span>I'm {process.env.REACT_APP_FNAME}.</span>
                         </h1>
                         <div className="subtitle">
                             <p>Glad for the visit!</p>
