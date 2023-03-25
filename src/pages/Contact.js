@@ -2,9 +2,10 @@
 import Layout from "../components/Layout";
 import "./contact.scss";
 
-import profileImage from "../images/profile-image.png";
 import mailIcon from "../images/vectors/mail-icon.jpg";
 import linkedIn from "../images/vectors/linkedin-logo.jpg";
+
+import * as DETAILS from "../constants/details";
 
 const Contact = () => {
     return (
@@ -17,15 +18,12 @@ const Contact = () => {
                     <div className="bottom">
                         <div className="left">
                             <div className="image-wrapper">
-                                <img
-                                    alt="Profile picture"
-                                    src={profileImage}
-                                />
+                                <img alt="Profile picture" src={DETAILS.PROFILE_SRC} />
                             </div>
                         </div>
                         <div className="right contact-details">
                             <div className="icon-label-link">
-                                <a href="mailto:johndoe@email.com">
+                                <a href={`mailto:${DETAILS.EMAIL}`}>
                                     <div className="inner-container">
                                         <div className="left">
                                             <div className="icon-wrapper">
@@ -34,13 +32,13 @@ const Contact = () => {
                                         </div>
                                         <div className="right">
                                             <div className="label">Email</div>
-                                            <div className="link">johndoe@email.com</div>
+                                            <div className="link">{DETAILS.EMAIL}</div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div className="icon-label-link">
-                                <a href="https://www.linkedin.com/">
+                                <a href={DETAILS.LINKEDIN}>
                                     <div className="inner-container">
                                         <div className="left">
                                             <div className="icon-wrapper">
@@ -49,7 +47,9 @@ const Contact = () => {
                                         </div>
                                         <div className="right">
                                             <div className="label">LinkedIn</div>
-                                            <div className="link">John Doe</div>
+                                            <div className="link">
+                                                {DETAILS.FNAME + " " + DETAILS.LNAME}
+                                            </div>
                                         </div>
                                     </div>
                                 </a>

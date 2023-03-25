@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
 import "./footer.scss";
+import * as DETAILS from '../../constants/details';
 
 const Footer = () => {
     const style = { height: 35, width: 35 };
@@ -10,17 +11,17 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <div class="social-icons">
-                    <SocialIcon url="mailto:johndoe@email.com" style={style} bgColor={icon_bg_color} />
-                    <SocialIcon url="https://www.linkedin.com/" style={style} bgColor={icon_bg_color} />
-                    <SocialIcon url="https://github.com/" style={style} bgColor={icon_bg_color} />
+                <div className="social-icons">
+                    <SocialIcon url={`mailto:${DETAILS.EMAIL}`} style={style} bgColor={icon_bg_color} />
+                    <SocialIcon url={DETAILS.LINKEDIN} style={style} bgColor={icon_bg_color} />
+                    <SocialIcon url={DETAILS.GITHUB} style={style} bgColor={icon_bg_color} />
                 </div>
 
-                <div class="footer-brand-wrapper">
+                <div className="footer-brand-wrapper">
                     <NavLink className="footer-brand" to="/">
-                        Portfolio Website
+                        {DETAILS.BRAND_NAME}
                     </NavLink>
-                    <span className="copy">&copy; 2023</span>
+                    <span className="copy">&copy; {DETAILS.YEAR}</span>
                 </div>
             </div>
         </footer>
