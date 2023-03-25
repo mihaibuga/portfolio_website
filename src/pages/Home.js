@@ -16,6 +16,7 @@ import {TbBrandVscode} from "react-icons/tb";
 import Layout from "../components/Layout";
 import "./home.scss";
 import * as ROUTES from "../constants/routes";
+import * as DETAILS from "../constants/details";
 
 const Home = () => {
     const banner_image_src =
@@ -29,7 +30,7 @@ const Home = () => {
                 <div className="inner-wrapper container">
                     <div className="content-wrapper centered reduced">
                         <h1>
-                            <span>Welcome!</span> <span>I'm {process.env.REACT_APP_FNAME}.</span>
+                            <span>Welcome!</span> {process.env.REACT_APP_FNAME && <span>I'm {process.env.REACT_APP_FNAME}.</span>}
                         </h1>
                         <div className="subtitle">
                             <p>Glad for the visit!</p>
