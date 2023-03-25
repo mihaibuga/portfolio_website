@@ -10,17 +10,17 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <div class="social-icons">
-                    <SocialIcon url="mailto:johndoe@email.com" style={style} bgColor={icon_bg_color} />
-                    <SocialIcon url="https://www.linkedin.com/" style={style} bgColor={icon_bg_color} />
-                    <SocialIcon url="https://github.com/" style={style} bgColor={icon_bg_color} />
+                <div className="social-icons">
+                    <SocialIcon url={process.env.REACT_APP_EMAIL} style={style} bgColor={icon_bg_color} />
+                    <SocialIcon url={process.env.REACT_APP_LINKEDIN} style={style} bgColor={icon_bg_color} />
+                    <SocialIcon url={process.env.REACT_APP_GITHUB} style={style} bgColor={icon_bg_color} />
                 </div>
 
-                <div class="footer-brand-wrapper">
+                <div className="footer-brand-wrapper">
                     <NavLink className="footer-brand" to="/">
-                        Portfolio Website
+                        {process.env.REACT_APP_BRAND_NAME}
                     </NavLink>
-                    <span className="copy">&copy; 2023</span>
+                    <span className="copy">&copy; {process.env.REACT_APP_YEAR}</span>
                 </div>
             </div>
         </footer>
