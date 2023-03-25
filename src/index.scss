@@ -32,3 +32,100 @@ a {
     max-width: 1160px;
     padding: 0 16px;
 }
+
+.card {
+    background-color: $light-grey-bg;
+    background-color: $dark-grey-bg;
+    border-radius: 17px;
+    color: $main-dark;
+    color: $egg-shell;
+    padding: 17px;
+
+    a {
+        &:not([class]) {
+            color: $golden;
+        }
+    }
+}
+
+.spaced-elements {
+    display: flex;
+
+    &.rows {
+        flex-direction: column;
+    }
+
+    &.columns {
+        flex-direction: row;
+    }
+
+    &.gap-20 {
+        gap: 20px;
+    }
+
+    &.two-even-cols {
+        .column {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .spaced-elements {
+        &.columns {
+            flex-direction: column;
+        }
+
+        &.two-even-cols {
+            .column {
+                width: inherit;
+            }
+        }
+    }
+}
+
+// Content wrapper
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &.centered {
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &.reduced {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        &.reduced {
+            width: 100%;
+        }
+    }
+}
+
+// CTA link
+a {
+    &.cta {
+        background-color: $egg-shell;
+        border-radius: 60px;
+        color: $main-dark;
+        font-size: 18px;
+        font-weight: 600;
+        height: fit-content;
+        padding: 16px 60px;
+        width: fit-content;
+
+        &:hover {
+            background-color: $main-dark;
+            -webkit-box-shadow:inset 0px 0px 0px 2px $golden;
+            -moz-box-shadow:inset 0px 0px 0px 2px $golden;
+            box-shadow:inset 0px 0px 0px 2px $golden;
+            color: $golden;
+        }
+    }
+}
