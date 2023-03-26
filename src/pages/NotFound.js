@@ -1,12 +1,27 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import "./not-found.scss";
+import * as ROUTES from "../constants/routes";
 
 const NotFound = () => {
     return (
         <Layout title="Page Not Found">
-            <div className="container">
-                <h1>404</h1>
-                <p>Not found</p>
-            </div>
+            <div className="spacer" style={{ height: "20px" }}></div>
+            <section className="container not-found">
+                <div className="content-wrapper centered reduced">
+                    <h1>
+                        404
+                    </h1>
+                    <h2>
+                        The page you are looking for does not exist.
+                    </h2>
+                    <div className="spacer" style={{ height: "20px" }}></div>
+                    <Link className="cta" to={ROUTES.LANDING}>
+                        Go back to the homepage
+                    </Link>
+                </div>
+            </section>
+            <div className="spacer" style={{ height: "20px" }}></div>
         </Layout>
     );
 };
