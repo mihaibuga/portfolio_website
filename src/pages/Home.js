@@ -16,7 +16,6 @@ import {TbBrandVscode} from "react-icons/tb";
 import Layout from "../components/Layout";
 import "./home.scss";
 import * as ROUTES from "../constants/routes";
-import * as DETAILS from "../constants/details";
 
 const Home = () => {
     const banner_image_src =
