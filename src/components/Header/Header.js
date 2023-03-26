@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
+import * as DETAILS from '../../constants/details';
 
 import "./header.scss";
 
@@ -26,7 +27,7 @@ const Header = () => {
         <header>
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    Portfolio Website
+                    {DETAILS.BRAND_NAME}
                 </NavLink>
                 <button className={`menu-toggle${showMenu ? ' toggled' : ''}`} onClick={handleNavbarToggle}>
                     <span></span>
