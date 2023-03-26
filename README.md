@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Website
+-> https://mihaibuga.me/
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#main-features">Main Features</a></li>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#visuals">Visuals</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#link-to-live">See live version</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![home-page.png][home-page]
 
-### `npm test`
+The portfolio website is a project I'm using to highlight the current skill levels and my potential in the visitor's opinion.
+I'm looking at this project as my first virtual contact card and I hope visiting it would inspire your work.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Visit Homepage
+- Visit Projects page
+- Visit Contact page
+- Interact with CTA
+- See projects as cards grid, each with image, description and CTA
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm run eject`
+### Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Front End:
+* [HTML][html]
+* [CSS][css]
+* [React.js][react]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+IDE:
+* [Visual Studio Code][visual-studio-code]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Deploy
+* [Netlify][netlify]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Visuals
 
-### Code Splitting
+Projects:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![projects.png][projects]
 
-### Analyzing the Bundle Size
+Contact:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![contact.png][contact]
 
-### Making a Progressive Web App
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Installation
+- Run "npm install" in CMD from the root directory
+- Run "npm start" in CMD from the root directory
 
-### Deployment
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- USAGE EXAMPLES -->
+## Usage
+
+The React client will display the app to the localhost:3000 address.
+Make sure you're setting an .env file in the root directory with the following variables:
+- REACT_APP_LNAME="" // Author's Last Name
+- REACT_APP_FNAME="" // Author's First name
+- REACT_APP_BRAND_NAME="" // Website name
+- REACT_APP_YEAR="" // Year being displayed in the footer section
+- REACT_APP_LINKEDIN="" Link to LinkedIn profile
+- REACT_APP_EMAIL="" // Email address
+- REACT_APP_GITHUB="" // link to Github Repository
+- REACT_APP_PROFILE_SRC="" //link to preferred profile picture
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Link to live
+
+Link: https://mihaibuga.me/
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[html]: https://html.com/
+[css]: https://www.w3.org/Style/CSS/Overview.en.html
+[react]: https://reactjs.org/
+[visual-studio-code]: https://code.visualstudio.com/
+[netlify]: https://www.netlify.com/
+
+
+[home-page]: https://user-images.githubusercontent.com/77620547/227750431-dcb41020-345c-45ee-96b8-5d3620967a3e.png
+[projects]: https://user-images.githubusercontent.com/77620547/227750455-c84a1cec-a490-42cf-9ab0-6b1ee10c4257.png
+[contact]: https://user-images.githubusercontent.com/77620547/227750457-7e2f8b09-df01-4b39-b0a3-72e67fcde351.png
