@@ -133,7 +133,7 @@ header {
 
             .nav-elements {
                 background-color: $main-dark;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 gap: 20px;
                 height: calc(100% - 94px);
@@ -145,14 +145,10 @@ header {
                 -webkit-font-smoothing: antialiased;
 
                 top: 94px;
-                transform-origin: 0% 0%;
-                transform: translate(100%, 0);
-
-                transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
                 width: calc(100% - 34px);
 
                 &.active {
-                    transform: translate(0);
+                    display: flex;
                 }
 
                 > a {
