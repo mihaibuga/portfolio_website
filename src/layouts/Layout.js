@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 const Layout = ({ title, children }) => {
     const titleSuffix = " | Portfolio Website";

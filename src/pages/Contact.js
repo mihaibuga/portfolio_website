@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import Layout from "../components/Layout";
-import "./contact.scss";
+import Layout from "../layouts/Layout";
+import "../assets/styles/contact.scss";
 
-import mailIcon from "../images/vectors/mail-icon.jpg";
-import linkedIn from "../images/vectors/linkedin-logo.jpg";
+import mailIcon from "../assets/images/vectors/mail-icon.jpg";
+import linkedIn from "../assets/images/vectors/linkedin-logo.jpg";
 
-import * as DETAILS from "../constants/details";
+import * as DETAILS from "../data/details";
 
 const Contact = () => {
     return (
@@ -47,9 +47,7 @@ const Contact = () => {
                                         </div>
                                         <div className="right">
                                             <div className="label">LinkedIn</div>
-                                            <div className="link">
-                                                {DETAILS.FNAME + " " + DETAILS.LNAME}
-                                            </div>
+                                            <div className="link">{DETAILS.FNAME + " " + DETAILS.LNAME}</div>
                                         </div>
                                     </div>
                                 </a>

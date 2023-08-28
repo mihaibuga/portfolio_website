@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
 import "./footer.scss";
-import * as DETAILS from '../../constants/details';
+import * as DETAILS from "../../data/details";
 
 const Footer = () => {
     const style = { height: 35, width: 35 };

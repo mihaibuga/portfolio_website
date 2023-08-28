@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import * as ROUTES from "../../constants/routes";
-import * as DETAILS from '../../constants/details';
+import * as ROUTES from "../../data/routes";
+import * as DETAILS from "../../data/details";
 
 import "./header.scss";
 
@@ -10,18 +10,18 @@ const Header = () => {
 
     const handleNavbarToggle = () => {
         setShowMenu(!showMenu);
-    }
+    };
 
     const handleNavDisplayOnResize = () => {
         setShowMenu(false);
-    }
+    };
 
     useEffect(() => {
-        window.addEventListener('resize', handleNavDisplayOnResize);
+        window.addEventListener("resize", handleNavDisplayOnResize);
         return () => {
-          window.removeEventListener('resize', handleNavDisplayOnResize)
-        }
-      }, [])
+            window.removeEventListener("resize", handleNavDisplayOnResize);
+        };
+    }, []);
 
     return (
         <header>
@@ -29,12 +29,12 @@ const Header = () => {
                 <NavLink className="navbar-brand" to="/">
                     {DETAILS.BRAND_NAME}
                 </NavLink>
-                <button className={`menu-toggle${showMenu ? ' toggled' : ''}`} onClick={handleNavbarToggle}>
+                <button className={`menu-toggle${showMenu ? " toggled" : ""}`} onClick={handleNavbarToggle}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <nav className={`nav-elements${showMenu ? ' active' : ''}`}>
+                <nav className={`nav-elements${showMenu ? " active" : ""}`}>
                     <NavLink className="nav-link" aria-current="page" to={ROUTES.LANDING}>
                         Home
                     </NavLink>

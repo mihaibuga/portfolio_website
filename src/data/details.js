@@ -1,4 +1,4 @@
-import profileImage from "../images/profile-image.png";
+import profileImage from "../assets/images/profile-image.png";
 
 export const LNAME = process.env.REACT_APP_LNAME ? process.env.REACT_APP_LNAME : '';
 export const FNAME = process.env.REACT_APP_FNAME ? process.env.REACT_APP_FNAME : '';
