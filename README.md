@@ -87,16 +87,7 @@ Contact:
 ## Usage
 
 The React client will display the app to the localhost:3000 address.
-Make sure you're setting an .env file in the root directory with the following variables:
-- REACT_APP_LNAME="" // Author's Last Name
-- REACT_APP_FNAME="" // Author's First name
-- REACT_APP_BRAND_NAME="" // Website name
-- REACT_APP_YEAR="" // Year being displayed in the footer section
-- REACT_APP_LINKEDIN="" Link to LinkedIn profile
-- REACT_APP_EMAIL="" // Email address
-- REACT_APP_GITHUB="" // link to Github Repository
-- REACT_APP_PROFILE_SRC="" //link to preferred profile picture
-
+Make sure you're setting an .env file in the root directory using the .env.template file as an example.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
