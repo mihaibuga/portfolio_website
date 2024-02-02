@@ -72,8 +72,8 @@ const Home = () => {
             <section className="container spaced-elements columns gap-20 two-even-cols">
                 <div className="card column">
                     <div className="content-wrapper centered">
-                        <h2>I've worked on some cool projects, both in a team and individually.</h2>
-                        <h2>Wnat to check them?</h2>
+                        <h2>I've worked on some cool projects, both in a team and individually too.</h2>
+                        <h2>Want to check them out?</h2>
 
                         <div className="spacer" style={{ height: "20px" }}></div>
 
@@ -85,7 +85,7 @@ const Home = () => {
 
                 <div className="card column">
                     <div className="content-wrapper centered reduced">
-                        <h2>Some of the Languages I'm familiar with:</h2>
+                        <h2>Some of the Languages and Tools I'm familiar with:</h2>
 
                         <div className="icons-wrapper">
                             <FaHtml5 alt="HTML" title="HTML" />
