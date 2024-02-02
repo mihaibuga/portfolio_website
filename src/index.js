@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import * as ROUTES from "./data/routes";
+import * as ROUTES from "./routes/routes";
 
 import "./assets/styles/index.scss";
 

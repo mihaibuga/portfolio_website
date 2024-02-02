@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import "../assets/styles/not-found.scss";
-import * as ROUTES from "../data/routes";
+import * as ROUTES from "../routes/routes";
 
 const NotFound = () => {
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import * as ROUTES from "../../data/routes";
+import * as ROUTES from "../../routes/routes";
 import * as DETAILS from "../../data/details";
 
 import "./header.scss";
