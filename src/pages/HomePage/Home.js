@@ -12,9 +12,9 @@ import {
 import { SiJavascript, SiCsharp } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 
-import Layout from "../layouts/Layout";
-import "../assets/styles/home.scss";
-import * as ROUTES from "../routes/routes";
+import Layout from "../../layouts/Layout";
+import "./home.scss";
+import * as ROUTES from "../../routes/routes";
 
 const Home = () => {
     const banner_image_src =

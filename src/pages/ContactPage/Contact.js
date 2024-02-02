@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import Layout from "../layouts/Layout";
-import "../assets/styles/contact.scss";
+import Layout from "../../layouts/Layout";
+import "./contact.scss";
 
-import mailIcon from "../assets/images/vectors/mail-icon.jpg";
-import linkedIn from "../assets/images/vectors/linkedin-logo.jpg";
+import mailIcon from "../../assets/images/vectors/mail-icon.jpg";
+import linkedIn from "../../assets/images/vectors/linkedin-logo.jpg";
 
-import * as DETAILS from "../data/details";
+import * as DETAILS from "../../data/details";
 
 const Contact = () => {
     return (

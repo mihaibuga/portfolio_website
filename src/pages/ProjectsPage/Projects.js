@@ -1,6 +1,6 @@
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
-import Layout from "../layouts/Layout";
-import "../assets/styles/projects.scss";
+import Layout from "../../layouts/Layout";
+import "./projects.scss";
 
 const Projects = () => {
     const projects = [
