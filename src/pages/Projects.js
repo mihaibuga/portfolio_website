@@ -8,7 +8,7 @@ const Projects = () => {
             name: "DungeonCrawl",
             repo_url: "https://github.com/mihaibuga/DungeonCrawl",
             thumbnail_src:
-                "https://camo.githubusercontent.com/cf6f81d1463e5e28a9681a79b448107fcee875609e7023f3b0dbfe295c57ed36/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647177746d396677312f696d6167652f75706c6f61642f76313634323637383236352f44756e67656f6e437261776c2f626567696e6e696e675f75346a6b736e2e706e67",
+                "https://camo.githubusercontent.com/4f5b718044d575aae5d1f03cc34010212b0f230b69a80f9f736bda4e01664e03/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647177746d396677312f696d6167652f75706c6f61642f76313634323637383236352f44756e67656f6e437261776c2f626567696e6e696e675f75346a6b736e2e706e67",
             description:
                 "A classic Roguelike game, with multiple maps, mobs, items and challenges. Navigate a labyrinth environment and battle various monsters to find the escape route from the castle. Built with Unity",
             project_work: "team",
