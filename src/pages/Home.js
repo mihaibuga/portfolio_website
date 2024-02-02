@@ -6,7 +6,6 @@ import {
     FaHtml5,
     FaPython,
     FaReact,
-    FaDrupal,
     FaPhp,
     FaFigma,
 } from "react-icons/fa";
@@ -88,22 +87,21 @@ const Home = () => {
                         <h2>Some of the Languages and Tools I'm familiar with:</h2>
 
                         <div className="icons-wrapper">
-                            <FaHtml5 alt="HTML" title="HTML" />
-                            <FaCss3Alt alt="CSS" title="CSS" />
-                            <SiJavascript alt="JS" title="JS" />
-                            <FaReact alt="React" title="React" />
-                            <SiCsharp alt="C Sharp" title="C Sharp" />
-                            <FaPython alt="Python" title="Python" />
-                            <FaPhp alt="PHP" title="PHP" />
+                            <FaHtml5 alt="HTML" title="HTML" color="F06529" />
+                            <FaCss3Alt alt="CSS" title="CSS" color="264de4" />
+                            <SiJavascript alt="JS" title="JS" color="f0db4f" />
+                            <FaReact alt="React" title="React" color="61dafb" />
+                            <SiCsharp alt="C Sharp" title="C Sharp" color="512bd4" />
+                            <FaPython alt="Python" title="Python" color="4584B6" />
+                            <FaPhp alt="PHP" title="PHP" color="777BB3" />
                         </div>
 
                         <h2>Dev Tools:</h2>
                         <div className="icons-wrapper">
-                            <FaGitAlt alt="Git" title="Git" />
-                            <FaGithubSquare alt="GitHub" title="GitHub" />
-                            <TbBrandVscode alt="VSCode" title="VSCode" />
-                            <FaFigma alt="Figma" title="Figma" />
-                            <FaDrupal alt="Drupal" title="Drupal" />
+                            <FaGitAlt alt="Git" title="Git" color="f34f29" />
+                            <FaGithubSquare alt="GitHub" title="GitHub" color="4078c0" />
+                            <TbBrandVscode alt="VSCode" title="VSCode" color="0078d7" />
+                            <FaFigma alt="Figma" title="Figma" color="f24e1e" />
                         </div>
                     </div>
                 </div>
