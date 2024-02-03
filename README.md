@@ -1,7 +1,6 @@
 <div id="top"></div>
 
 # Portfolio Website
--> https://mihaibuga.me/
 
 <!-- TABLE OF CONTENTS -->
 <details>
