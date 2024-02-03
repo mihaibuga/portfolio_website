@@ -90,10 +90,6 @@ Make sure you're setting an .env file in the root directory using the .env.templ
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Link to live
-
-Link: https://mihaibuga.me/
-
 <!-- MARKDOWN LINKS & IMAGES -->
 [html]: https://html.com/
 [css]: https://www.w3.org/Style/CSS/Overview.en.html
