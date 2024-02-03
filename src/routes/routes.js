@@ -5,14 +5,14 @@ import Projects from "../pages/ProjectsPage/Projects";
 import NotFound from "../pages/NotFoundPage/NotFound";
 import Contact from "../pages/ContactPage/Contact";
 
-export const LANDING = "/";
-export const PROJECTS = "/projects";
-export const CONTACT = "/contact";
-export const ANY = "*";
+export const LANDING = "/portfolio_website/";
+export const PROJECTS = LANDING + "projects";
+export const CONTACT = LANDING + "contact";
+export const ANY = LANDING + "*";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: LANDING,
         element: <App />,
         children: [
             { path: "", element: <Home /> },
