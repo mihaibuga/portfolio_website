@@ -1,7 +1,6 @@
 <div id="top"></div>
 
 # Portfolio Website
--> https://mihaibuga.me/
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -90,10 +89,6 @@ The React client will display the app to the localhost:3000 address.
 Make sure you're setting an .env file in the root directory using the .env.template file as an example.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-## Link to live
-
-Link: https://mihaibuga.me/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [html]: https://html.com/
