@@ -42,10 +42,10 @@ const Projects = () => {
     ];
 
     const create_project_preview_card = (project_details) => (
-        <div className="project-preview-card">
+        <div key={project_details.name} className="project-preview-card">
             <div className="top bg-image-wrapper">
                 <img src={project_details.thumbnail_src} alt={`Thumbnail of the ${project_details.name} project`} />
-                <div class="project-work-tag">{project_details.project_work} Project</div>
+                <div className="project-work-tag">{project_details.project_work} Project</div>
             </div>
 
             <div className="bottom">
