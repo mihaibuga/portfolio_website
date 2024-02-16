@@ -53,9 +53,6 @@ Front End:
 IDE:
 * [Visual Studio Code][visual-studio-code]
 
-Deploy
-* [Netlify][netlify]
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -95,7 +92,6 @@ Make sure you're setting an .env file in the root directory using the .env.templ
 [css]: https://www.w3.org/Style/CSS/Overview.en.html
 [react]: https://reactjs.org/
 [visual-studio-code]: https://code.visualstudio.com/
-[netlify]: https://www.netlify.com/
 
 
 [home-page]: https://user-images.githubusercontent.com/77620547/227750431-dcb41020-345c-45ee-96b8-5d3620967a3e.png
