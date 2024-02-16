@@ -16,7 +16,6 @@
     </li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#link-to-live">See live version</a></li>
   </ol>
 </details>
 
