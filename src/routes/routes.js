@@ -5,7 +5,7 @@ import Projects from "../pages/ProjectsPage/Projects";
 import NotFound from "../pages/NotFoundPage/NotFound";
 import Contact from "../pages/ContactPage/Contact";
 
-export const LANDING = "/portfolio_website/";
+export const LANDING = "/";
 export const PROJECTS = LANDING + "projects";
 export const CONTACT = LANDING + "contact";
 export const ANY = LANDING + "*";
