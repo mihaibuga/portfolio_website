@@ -15,7 +15,7 @@ const App = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            if (storeProjects === null) {
+            if (storeProjects === null && Array.isArray(storeProjects) === false) {
                 const fetchedProjects = await getProjects();
                 setStoreProjects(fetchedProjects);
             }
