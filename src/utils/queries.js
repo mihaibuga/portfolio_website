@@ -70,6 +70,12 @@ export const profileDataQuery = () => {
           platformLogo
         },
         url
+      },
+      resumes[]->{
+        _id,
+        title,
+        "resumeFileUrl": resumeFile.asset->url,
+        language
       }
     }`;
 
