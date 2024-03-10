@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import * as ROUTES from "../../routes/routes";
-import * as DETAILS from "../../data/details";
-
+import useDataStore from "../../store/dataStore";
 import "./header.scss";
 
 const Header = () => {
+    const { storeSiteSettings } = useDataStore();
     const [showMenu, setShowMenu] = useState(false);
+    const [portfolioTitle, setPortfolioTitle] = useState("Portfolio Website");
 
     const handleNavbarToggle = () => {
         setShowMenu(!showMenu);
@@ -23,25 +24,33 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (storeSiteSettings !== null) {
+            setPortfolioTitle(storeSiteSettings.siteTitle);
+        }
+    }, [storeSiteSettings]);
+
     return (
         <header>
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    {DETAILS.BRAND_NAME}
+                    {portfolioTitle}
                 </NavLink>
+
                 <button className={`menu-toggle${showMenu ? " toggled" : ""}`} onClick={handleNavbarToggle}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
                 <nav className={`nav-elements${showMenu ? " active" : ""}`}>
-                    <NavLink className="nav-link" aria-current="page" to={ROUTES.LANDING}>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.landing.path}>
                         Home
                     </NavLink>
-                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PROJECTS}>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.projects.path}>
                         Projects
                     </NavLink>
-                    <NavLink className="nav-link" aria-current="page" to={ROUTES.CONTACT}>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.contact.path}>
                         Contact
                     </NavLink>
                 </nav>
