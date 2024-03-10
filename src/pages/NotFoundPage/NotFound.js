@@ -12,7 +12,7 @@ const NotFound = () => {
                     <h1>404</h1>
                     <h2>The page you are looking for does not exist.</h2>
                     <div className="spacer" style={{ height: "20px" }}></div>
-                    <Link className="cta" to={ROUTES.LANDING}>
+                    <Link className="cta" to={ROUTES.PATHS.landing.path}>
                         Go back to the homepage
                     </Link>
                 </div>

@@ -5,20 +5,22 @@ import Projects from "../pages/ProjectsPage/Projects";
 import NotFound from "../pages/NotFoundPage/NotFound";
 import Contact from "../pages/ContactPage/Contact";
 
-export const LANDING = "/";
-export const PROJECTS = LANDING + "projects";
-export const CONTACT = LANDING + "contact";
-export const ANY = LANDING + "*";
+export const PATHS = {
+    landing: {path: "/", title: "Home"},
+    projects: {path: "/projects", title: "Projects"},
+    contact: {path: "/contact", title: "Contact"},
+    any: {path: "/*", title: "Any"},
+};
 
 export const router = createBrowserRouter([
     {
-        path: LANDING,
+        path: PATHS.landing.path,
         element: <App />,
         children: [
             { path: "", element: <Home /> },
-            { path: PROJECTS, element: <Projects /> },
-            { path: CONTACT, element: <Contact /> },
-            { path: ANY, element: <NotFound /> },
+            { path: PATHS.projects.path, element: <Projects /> },
+            { path: PATHS.contact.path, element: <Contact /> },
+            { path: PATHS.any.path, element: <NotFound /> },
         ],
     },
 ]);

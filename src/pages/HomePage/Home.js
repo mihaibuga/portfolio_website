@@ -60,8 +60,8 @@ const Home = () => {
             <section className="callout">
                 <div className="container">
                     <h2>Interested in staying in touch?</h2>
-                    <Link className="cta" to={ROUTES.CONTACT}>
-                        Go to Contact
+                    <Link className="cta" to={ROUTES.PATHS.contact.path}>
+                        Go to {ROUTES.PATHS.contact.title}
                     </Link>
                 </div>
             </section>
@@ -76,8 +76,8 @@ const Home = () => {
 
                         <div className="spacer" style={{ height: "20px" }}></div>
 
-                        <Link className="cta" to={ROUTES.PROJECTS}>
-                            Go to Projects
+                        <Link className="cta" to={ROUTES.PATHS.projects.path}>
+                            Go to {ROUTES.PATHS.projects.title}
                         </Link>
                     </div>
                 </div>
