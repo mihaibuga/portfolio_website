@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import * as ROUTES from "../../routes/routes";
-import * as DETAILS from "../../data/details";
-
+import useDataStore from "../../store/dataStore";
 import "./header.scss";
 
 const Header = () => {
+    const { storeSiteSettings } = useDataStore();
     const [showMenu, setShowMenu] = useState(false);
+    const [portfolioTitle, setPortfolioTitle] = useState("Portfolio Website");
 
     const handleNavbarToggle = () => {
         setShowMenu(!showMenu);
@@ -23,11 +24,17 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (storeSiteSettings !== null) {
+            setPortfolioTitle(storeSiteSettings.siteTitle);
+        }
+    }, [storeSiteSettings]);
+
     return (
         <header>
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    {DETAILS.BRAND_NAME}
+                    {portfolioTitle}
                 </NavLink>
 
                 <button className={`menu-toggle${showMenu ? " toggled" : ""}`} onClick={handleNavbarToggle}>
