@@ -29,13 +29,13 @@ export const ProfileSchema = {
       name: 'versionControlProfileUrl',
       title: 'Version Control Profile URL',
       type: 'reference',
-      to: [{type: 'versionControlLink'}],
+      to: [{type: 'customLink'}]
     },
     {
       name: 'socialLinks',
       title: 'Social Links',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'socialLink'}]}],
+      of: [{type: 'reference', to: [{type: 'customLink'}]}],
     },
   ],
 }

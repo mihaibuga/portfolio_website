@@ -37,7 +37,7 @@ export const ProjectSchema = {
       name: 'versionedProjectLink',
       title: "Versioned Project's URL",
       type: 'reference',
-      to: [{type: 'versionControlLink'}],
+      to: [{type: 'customLink'}]
     },
   ],
 }
