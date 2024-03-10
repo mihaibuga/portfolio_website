@@ -1,35 +1,38 @@
 import { Link } from "react-router-dom";
-import {
-    FaCss3Alt,
-    FaGitAlt,
-    FaGithubSquare,
-    FaHtml5,
-    FaPython,
-    FaReact,
-    FaPhp,
-    FaFigma,
-} from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaGithubSquare, FaHtml5, FaPython, FaReact, FaPhp, FaFigma } from "react-icons/fa";
 import { SiJavascript, SiCsharp } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 
 import Layout from "../../layouts/Layout";
 import "./home.scss";
 import * as ROUTES from "../../routes/routes";
+import useDataStore from "../../store/dataStore";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+    const { storeProfileData } = useDataStore();
+    const [fName, setFName] = useState();
+
     const banner_image_src =
         "https://images.unsplash.com/photo-1543751416-705d3e34d02a?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=3600";
+
+    useEffect(() => {
+        if (storeProfileData !== null) {
+            setFName(storeProfileData.firstName);
+        }
+    }, [storeProfileData]);
+
     return (
         <Layout title="Home">
             <div className="home-banner">
                 <div className="bg-image-wrapper">
                     <img src={banner_image_src} alt="" />
                 </div>
+
                 <div className="inner-wrapper container">
                     <div className="content-wrapper centered reduced">
                         <h1>
-                            <span>Welcome!</span>{" "}
-                            {process.env.REACT_APP_FNAME && <span>I'm {process.env.REACT_APP_FNAME}.</span>}
+                            <span>Welcome!</span> {fName && <span>I'm {fName}.</span>}
                         </h1>
                         <div className="subtitle">
                             <p>Glad for the visit!</p>
@@ -60,8 +63,8 @@ const Home = () => {
             <section className="callout">
                 <div className="container">
                     <h2>Interested in staying in touch?</h2>
-                    <Link className="cta" to={ROUTES.CONTACT}>
-                        Go to Contact
+                    <Link className="cta" to={ROUTES.PATHS.contact.path}>
+                        Go to {ROUTES.PATHS.contact.title}
                     </Link>
                 </div>
             </section>
@@ -76,8 +79,8 @@ const Home = () => {
 
                         <div className="spacer" style={{ height: "20px" }}></div>
 
-                        <Link className="cta" to={ROUTES.PROJECTS}>
-                            Go to Projects
+                        <Link className="cta" to={ROUTES.PATHS.projects.path}>
+                            Go to {ROUTES.PATHS.projects.title}
                         </Link>
                     </div>
                 </div>
