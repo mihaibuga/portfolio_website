@@ -6,11 +6,6 @@ const assertValue = (v, errorMessage) => {
     return v;
 }
 
-export const apiDomain = assertValue(
-    process.env.REACT_APP_API_DOMAIN,
-    "Missing environment variable: REACT_APP_API_DOMAIN"
-);
-
 export const sanityDataset = assertValue(
     process.env.REACT_APP_SANITY_DATASET,
     "Missing environment variable: REACT_APP_SANITY_DATASET"
