@@ -25,11 +25,12 @@ const Contact = () => {
             setLName(lastName);
             setEmail(emailAddress);
             setProfileImg(urlForImage(profileImage));
-            setIsLinkedInDeclared(
-                socialLinks.some((socialLink) => socialLink.platform.title.toLowerCase() === "linkedin")
+            const isLinkedInStored = socialLinks.some(
+                (socialLink) => socialLink.platform.title.toLowerCase() === "linkedin"
             );
+            setIsLinkedInDeclared(isLinkedInStored);
             setLinkedinDetails(
-                isLinkedInDeclared &&
+                isLinkedInStored &&
                     socialLinks.find((socialLink) => socialLink.platform.title.toLowerCase() === "linkedin")
             );
         }

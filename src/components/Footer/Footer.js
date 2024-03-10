@@ -9,6 +9,7 @@ import { getYearFromDate } from "../../utils/helpers";
 
 const Footer = () => {
     const { storeSiteSettings, storeProfileData } = useDataStore();
+    const [isLoading, setIsLoading] = useState(true);
     const [portfolioTitle, setPortfolioTitle] = useState("Portfolio Website");
     const [copyrightYear, setCopyrightYear] = useState("Portfolio Website");
     const [email, setEmail] = useState();
@@ -24,19 +25,19 @@ const Footer = () => {
 
         if (storeProfileData !== null) {
             setEmail(storeProfileData.emailAddress);
-            setIsLinkedInDeclared(
-                storeProfileData.socialLinks.some(
-                    (socialLink) => socialLink.platform.title.toLowerCase() === "linkedin"
-                )
+            const isLinkedInStored = storeProfileData.socialLinks.some(
+                (socialLink) => socialLink.platform.title.toLowerCase() === "linkedin"
             );
+            setIsLinkedInDeclared(isLinkedInStored);
             setLinkedinDetails(
-                isLinkedInDeclared &&
+                isLinkedInStored &&
                     storeProfileData.socialLinks.find(
                         (socialLink) => socialLink.platform.title.toLowerCase() === "linkedin"
                     )
             );
             setVersionControlProfileUrl(storeProfileData.versionControlProfileUrl);
         }
+        setIsLoading(false);
     }, [storeSiteSettings, storeProfileData]);
 
     const style = { height: 35, width: 35 };
@@ -47,12 +48,12 @@ const Footer = () => {
             <div className="container">
                 <div className="social-icons">
                     <SocialIcon url={`mailto:${email}`} style={style} bgColor={icon_bg_color} />
-                    {isLinkedInDeclared && (
-                        <SocialIcon url={linkedInDetails.url} style={style} bgColor={icon_bg_color} />
+                    {isLoading === false && (
+                        <SocialIcon url={linkedInDetails?.url} style={style} bgColor={icon_bg_color} />
                     )}
-                    {versionControlProfileUrl &&
+                    {versionControlProfileUrl && (
                         <SocialIcon url={versionControlProfileUrl.url} style={style} bgColor={icon_bg_color} />
-                    }
+                    )}
                 </div>
 
                 <div className="footer-brand-wrapper">
