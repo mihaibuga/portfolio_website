@@ -21,7 +21,7 @@
             flex-direction: column;
         }
 
-        img {
+        img, svg {
             width: 100%;
             height: 100%;
         }
@@ -84,8 +84,8 @@
                                 overflow: hidden;
                                 width: 100%;
 
-                                img {
-                                    border-radius: 50%;
+                                img, svg {
+                                    border-radius: 8px;
                                     object-fit: contain;
                                 }
                             }
