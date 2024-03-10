@@ -45,13 +45,16 @@ const Header = () => {
 
                 <nav className={`nav-elements${showMenu ? " active" : ""}`}>
                     <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.landing.path}>
-                        Home
+                        {ROUTES.PATHS.landing.title}
                     </NavLink>
                     <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.projects.path}>
-                        Projects
+                        {ROUTES.PATHS.projects.title}
                     </NavLink>
                     <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.contact.path}>
-                        Contact
+                        {ROUTES.PATHS.contact.title}
+                    </NavLink>
+                    <NavLink className="nav-link" aria-current="page" to={ROUTES.PATHS.resume.path}>
+                        {ROUTES.PATHS.resume.title}
                     </NavLink>
                 </nav>
             </div>
