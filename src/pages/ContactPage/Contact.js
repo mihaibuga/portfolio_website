@@ -1,13 +1,16 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect, useState } from "react";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { AiOutlineLoading } from "react-icons/ai";
 import Layout from "../../layouts/Layout";
 import useDataStore from "../../store/dataStore";
 import "./contact.scss";
 import { urlForImage } from "../../utils/sanityImage";
+import profileSilhouette from "../../assets/images/Profile/profile-silhouette.png";
 
 const Contact = () => {
     const { storeProfileData } = useDataStore();
+    const [isLoading, setIsLoading] = useState(true);
     const [fName, setFName] = useState();
     const [lName, setLName] = useState();
     const [email, setEmail] = useState();
@@ -30,7 +33,8 @@ const Contact = () => {
                     socialLinks.find((socialLink) => socialLink.platform.title.toLowerCase() === "linkedin")
             );
         }
-    }, [storeProfileData]);
+        setIsLoading(false);
+    }, [storeProfileData, isLinkedInDeclared]);
 
     return (
         <Layout title="Contact">
@@ -42,9 +46,16 @@ const Contact = () => {
                     <div className="bottom">
                         <div className="left">
                             <div className="image-wrapper">
-                                <img alt="Profile picture" src={profileImg} />
+                                {isLoading ? (
+                                    <AiOutlineLoading className="loading-icon" />
+                                ) : profileImg ? (
+                                    <img alt="Profile picture" src={profileImg} />
+                                ) : (
+                                    <img alt="Profile picture" src={profileSilhouette} />
+                                )}
                             </div>
                         </div>
+
                         <div className="right contact-details">
                             <div className="icon-label-link">
                                 <a href={`mailto:${email}`}>
@@ -61,9 +72,10 @@ const Contact = () => {
                                     </div>
                                 </a>
                             </div>
-                            {isLinkedInDeclared && (
+
+                            {isLoading === false && isLinkedInDeclared && (
                                 <div className="icon-label-link">
-                                    <a href={linkedInDetails.url}>
+                                    <a href={linkedInDetails?.url}>
                                         <div className="inner-container">
                                             <div className="left">
                                                 <div className="icon-wrapper">
