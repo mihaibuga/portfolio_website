@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "../../layouts/Layout";
 import "./projects.scss";
-import ProjectCard from "./ProjectCard";
+import ProjectCardV2 from "../../components/ProjectCardV2/ProjectCardV2";
 import useDataStore from "../../store/dataStore";
 
 const Projects = () => {
@@ -15,7 +15,7 @@ const Projects = () => {
     }, [storeProjects]);
 
     const get_projects_as_cards = () => {
-        return projects?.map((project) => <ProjectCard key={project._id} project_details={project} />);
+        return projects?.map((project) => <ProjectCardV2 key={project._id} projectDetails={project} />);
     };
 
     return (

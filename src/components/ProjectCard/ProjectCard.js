@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
+import "./projectCard.scss";
 import { urlForImage } from "../../utils/sanityImage";
 
 const ProjectCard = ({ project_details }) => {

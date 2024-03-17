@@ -1,0 +1,26 @@
+.link-button-with-icon {
+    align-items: center;
+    column-gap: 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-size: 1.6em;
+    width: fit-content;
+    -webkit-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+    -moz-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+    box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+    transition-duration: 500ms;
+
+    &:hover {
+        -webkit-box-shadow: 1px 1px 30px 1px rgba(34, 31, 32,.2);
+        -moz-box-shadow: 1px 1px 30px 1px rgba(34, 31, 32, .2);
+        box-shadow: 1px 1px 30px 1px rgba(34, 31, 32, .2);
+    }
+
+    &.right-aligned {
+        flex-direction: row-reverse;
+    }
+}

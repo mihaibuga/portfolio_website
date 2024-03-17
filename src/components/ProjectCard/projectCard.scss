@@ -1,0 +1,62 @@
+@import "../../assets/styles/_variables.scss";
+
+.project-preview-card {
+    background-color: $main-dark;
+    border: 2px solid $shadow-grey;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    .top {
+        height: 300px;
+        position: relative;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .project-work-tag {
+            background-color: $egg-shell;
+            bottom: 1rem;
+            border: 2px solid $golden;
+            border-radius: 4px;
+            color: $main-dark;
+            font-weight: 600;
+            padding: 4px 12px;
+            position: absolute;
+            right: 1rem;
+            text-transform: capitalize;
+        }
+    }
+
+    .bottom {
+        color: $egg-shell;
+        padding: 1rem 1.5rem 3rem;
+        position: relative;
+
+        .description {
+            padding-left: 0.5rem;
+        }
+    }
+
+    .project-repo-url {
+        align-items: center;
+        background-color: $egg-shell;
+        border-radius: 4px;
+        color: $main-dark;
+        display: flex;
+        height: fit-content;
+        padding: 4px 10px 4px 10px;
+        position: absolute;
+        width: fit-content;
+        bottom: 1rem;
+        right: 1.5rem;
+
+        svg {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
