@@ -1,0 +1,81 @@
+@import "../../assets/styles/_variables.scss";
+
+// Banner
+.banner {
+    position: relative;
+    height: fit-content;
+    min-height: 50vh;
+    overflow: hidden;
+
+    .bg-image-wrapper {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .inner-wrapper {
+        color: $egg-shell;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: inherit;
+        position: relative;
+        padding: 80px;
+        z-index: 1;
+
+        .content-wrapper {
+            h1 {
+                font-size: 3rem;
+                font-variant-caps: small-caps;
+                font-weight: 800;
+                line-height: 1.125;
+                margin-bottom: 1.5rem;
+                word-break: break-word;
+
+                span {
+                    width: fit-content;
+                }
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        min-height: 70vh;
+
+        .inner-wrapper {
+            padding: 80px 17px;
+
+            .content-wrapper {
+                h1 {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                }
+            }
+        }
+    }
+}
