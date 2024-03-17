@@ -1,0 +1,56 @@
+@import "../../assets/styles/_variables.scss";
+
+.project-preview-card-v2 {
+
+    &.wrapper {
+        border: unset;
+        border-radius: 12px;
+        overflow: hidden;
+        -webkit-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+        -moz-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+        box-shadow: 1px 1px 30px 1px rgba(34,31,32,.1);
+        transition-duration: 500ms;
+    }
+
+    .card-wrapping-link {
+        
+    }
+
+    .inner-content {
+        position: relative;
+    
+        .top {
+            background-color: $main-dark;
+            height: 300px;
+            position: relative;
+    
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    
+        .bottom {
+            background-color: rgba(143, 141, 142, 0.1);
+            color: $main-dark;
+            padding: 1rem;
+            position: relative;
+            text-align: center;
+    
+            h1 {
+                margin: unset;
+            }
+        }
+    }
+
+    &:hover {
+        &.wrapper {
+            -webkit-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.2);
+            -moz-box-shadow: 1px 1px 30px 1px rgba(34,31,32,.2);
+            box-shadow: 1px 1px 30px 1px rgba(34,31,32,.2);
+        }
+    }
+}
+
+
