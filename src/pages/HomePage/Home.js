@@ -8,6 +8,7 @@ import "./home.scss";
 import * as ROUTES from "../../routes/routes";
 import useDataStore from "../../store/dataStore";
 import { useEffect, useState } from "react";
+import BannerWithBgTitleAndDescription from "../../components/BannerWithBgTitleAndDescription/BannerWithBgTitleAndDescription";
 
 const Home = () => {
     const { storeProfileData } = useDataStore();
@@ -15,6 +16,11 @@ const Home = () => {
 
     const banner_image_src =
         "https://images.unsplash.com/photo-1543751416-705d3e34d02a?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=3600";
+    const bannerDetails = {
+        imgSrc: banner_image_src,
+        title: <><span>Welcome!</span> {fName && (<span>I'm {fName}.</span>)}</>,
+        subtitle: <p>Glad for the visit!</p>
+    }
 
     useEffect(() => {
         if (storeProfileData !== null) {
@@ -24,22 +30,7 @@ const Home = () => {
 
     return (
         <Layout title="Home">
-            <div className="home-banner">
-                <div className="bg-image-wrapper">
-                    <img src={banner_image_src} alt="" />
-                </div>
-
-                <div className="inner-wrapper container">
-                    <div className="content-wrapper centered reduced">
-                        <h1>
-                            <span>Welcome!</span> {fName && <span>I'm {fName}.</span>}
-                        </h1>
-                        <div className="subtitle">
-                            <p>Glad for the visit!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <BannerWithBgTitleAndDescription imgSrc={bannerDetails.imgSrc} title={bannerDetails.title} subtitle={bannerDetails.subtitle} />
 
             <div className="spacer" style={{ height: "20px" }}></div>
 
