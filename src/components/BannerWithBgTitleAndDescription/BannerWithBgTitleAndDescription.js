@@ -1,7 +1,7 @@
 import React from "react";
 import "./bannerWithBgTitleAndDescription.scss";
 
-const BannerWithBgTitleAndDescription = ({imgSrc, title, subtitle}) => {
+const BannerWithBgTitleAndDescription = ({imgSrc, title, subtitle = ''}) => {
     return (
         <div className="banner">
             <div className="bg-image-wrapper">
@@ -12,7 +12,7 @@ const BannerWithBgTitleAndDescription = ({imgSrc, title, subtitle}) => {
                 <div className="content-wrapper centered reduced">
                     <h1>{title}</h1>
 
-                    <div className="subtitle">{subtitle}</div>
+                    {subtitle !== '' && <div className="subtitle">{subtitle}</div>}
                 </div>
             </div>
         </div>

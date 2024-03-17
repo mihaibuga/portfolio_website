@@ -19,7 +19,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         img {
@@ -41,6 +41,10 @@
 
         .content-wrapper {
             h1 {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 8px;
+                color: $main-dark;
+                padding: 8px;
                 font-size: 3rem;
                 font-variant-caps: small-caps;
                 font-weight: 800;
@@ -56,6 +60,14 @@
             .subtitle {
                 font-size: 1.25rem;
                 line-height: 1.5;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 8px;
+                color: $main-dark;
+                padding: 8px;
+
+                p {
+                    margin: unset;
+                }
             }
         }
     }
