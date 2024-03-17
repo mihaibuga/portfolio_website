@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { IoMdGitBranch } from "react-icons/io";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import ModalImage from "react-modal-image";
 import Layout from "../../layouts/Layout";
 import * as ROUTES from "../../routes/routes";
 import LinkButtonWithIcon from "../../components/LinkButtonWithIcon/LinkButtonWithIcon";
@@ -80,8 +81,13 @@ const ProjectPage = () => {
                             <section>
                                 <h2>App Captures</h2>
                                 <div className="app-captures gallery">
-                                    {projectDetails.projectCaptures.map(capture => (
-                                        <img className="item" src={urlForImage(capture)} alt="" />
+                                    {projectDetails.projectCaptures.map((capture) => (
+                                        <ModalImage
+                                            className="item"
+                                            small={urlForImage(capture)}
+                                            large={urlForImage(capture)}
+                                            alt=""
+                                        />
                                     ))}
                                 </div>
                             </section>
