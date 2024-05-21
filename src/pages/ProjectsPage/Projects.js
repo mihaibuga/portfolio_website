@@ -3,10 +3,13 @@ import Layout from "../../layouts/Layout";
 import "./projects.scss";
 import ProjectCardV2 from "../../components/ProjectCardV2/ProjectCardV2";
 import useDataStore from "../../store/dataStore";
+import { useFetchProjectsData } from "../../utils/hooks";
 
 const Projects = () => {
     const { storeProjects } = useDataStore();
     const [projects, setProjects] = useState([]);
+
+    useFetchProjectsData();
 
     useEffect(() => {
         if (storeProjects !== null && typeof storeProjects === "object") {

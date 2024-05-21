@@ -11,11 +11,14 @@ import useDataStore from "../../store/dataStore";
 import { urlForImage } from "../../utils/sanityImage";
 import BannerWithBgTitleAndDescription from "../../components/BannerWithBgTitleAndDescription/BannerWithBgTitleAndDescription";
 import "./project.scss";
+import { useFetchProjectsData } from "../../utils/hooks";
 
 const ProjectPage = () => {
-    const { storeProjects } = useDataStore();
     let { id } = useParams();
+    const { storeProjects } = useDataStore();
     const [projectDetails, setProjectDetails] = useState();
+
+    useFetchProjectsData();
 
     useEffect(() => {
         const existingProject = storeProjects.find((project) => project._id === id);
