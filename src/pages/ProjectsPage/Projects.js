@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import { Container } from "@mui/material";
+
 import Layout from "../../layouts/Layout";
 import "./projects.scss";
 import ProjectCardV2 from "../../components/ProjectCardV2/ProjectCardV2";
@@ -22,24 +25,18 @@ const Projects = () => {
     };
 
     return (
-        <Layout title="Projects">
-            <div className="spacer" style={{ height: "20px" }}></div>
-
-            <div className="container">
+        <Layout title="Projects" hasTopBanner={false}>
+            <Container>
                 <h1>Projects</h1>
-            </div>
+            </Container>
 
-            <div className="spacer" style={{ height: "20px" }}></div>
-
-            <section className="container">
+            <Container>
                 {projects.length ? (
                     <div className="projects-grid-cards">{get_projects_as_cards()}</div>
                 ) : (
                     <div>Woops! It looks like there are no projects...</div>
                 )}
-            </section>
-
-            <div className="spacer" style={{ height: "20px" }}></div>
+            </Container>
         </Layout>
     );
 };

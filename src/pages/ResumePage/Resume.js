@@ -26,7 +26,7 @@ const Resume = () => {
     }, [storeProfileData]);
 
     return (
-        <Layout title="Resume">
+        <Layout title="Resume" hasTopBanner={false}>
             <div className="container">
                 <div className="inner-wrapper">
                     <h1>My Resume</h1>

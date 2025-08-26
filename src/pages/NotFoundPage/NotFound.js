@@ -6,7 +6,6 @@ import * as ROUTES from "../../routes/routes";
 const NotFound = () => {
     return (
         <Layout title="Page Not Found">
-            <div className="spacer" style={{ height: "20px" }}></div>
             <section className="container not-found">
                 <div className="content-wrapper centered reduced">
                     <h1>404</h1>
@@ -17,7 +16,6 @@ const NotFound = () => {
                     </Link>
                 </div>
             </section>
-            <div className="spacer" style={{ height: "20px" }}></div>
         </Layout>
     );
 };
