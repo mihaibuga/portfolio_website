@@ -12,7 +12,6 @@ export const PATHS = {
     projects: { path: "/projects", title: "Projects" },
     contact: { path: "/contact", title: "Contact" },
     resume: { path: "/resume", title: "Resume" },
-    any: { path: "/*", title: "Any" },
 };
 
 export const router = createBrowserRouter([
