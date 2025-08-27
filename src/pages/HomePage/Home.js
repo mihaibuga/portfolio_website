@@ -29,10 +29,8 @@ const Home = () => {
     }, [storeProfileData]);
 
     return (
-        <Layout title="Home">
+        <Layout title="Home" hasTopBanner={true}>
             <BannerWithBgTitleAndDescription imgSrc={bannerDetails.imgSrc} title={bannerDetails.title} subtitle={bannerDetails.subtitle} />
-
-            <div className="spacer" style={{ height: "20px" }}></div>
 
             <section className="container spaced-elements rows gap-20">
                 <div className="card">
@@ -49,8 +47,6 @@ const Home = () => {
                 </div>
             </section>
 
-            <div className="spacer" style={{ height: "20px" }}></div>
-
             <section className="callout">
                 <div className="container">
                     <h2>Interested in staying in touch?</h2>
@@ -60,15 +56,11 @@ const Home = () => {
                 </div>
             </section>
 
-            <div className="spacer" style={{ height: "20px" }}></div>
-
             <section className="container spaced-elements columns gap-20 two-even-cols">
                 <div className="card column">
                     <div className="content-wrapper centered">
                         <h2>I've worked on some cool projects, both in a team and individually too.</h2>
                         <h2>Want to check them out?</h2>
-
-                        <div className="spacer" style={{ height: "20px" }}></div>
 
                         <Link className="cta" to={ROUTES.PATHS.projects.path}>
                             Go to {ROUTES.PATHS.projects.title}
@@ -100,8 +92,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <div className="spacer" style={{ height: "20px" }}></div>
         </Layout>
     );
 };

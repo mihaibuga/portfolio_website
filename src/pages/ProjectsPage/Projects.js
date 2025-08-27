@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+
+import { Container, Grid } from "@mui/material";
+
 import Layout from "../../layouts/Layout";
 import "./projects.scss";
-import ProjectCardV2 from "../../components/ProjectCardV2/ProjectCardV2";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import useDataStore from "../../store/dataStore";
 import { useFetchProjectsData } from "../../utils/hooks";
 
@@ -14,32 +17,29 @@ const Projects = () => {
     useEffect(() => {
         if (storeProjects !== null && typeof storeProjects === "object") {
             setProjects(storeProjects);
+            console.log(storeProjects);
         }
     }, [storeProjects]);
 
     const get_projects_as_cards = () => {
-        return projects?.map((project) => <ProjectCardV2 key={project._id} projectDetails={project} />);
+        return projects?.map((project) => <ProjectCard key={project._id} projectDetails={project} />);
     };
 
     return (
-        <Layout title="Projects">
-            <div className="spacer" style={{ height: "20px" }}></div>
-
-            <div className="container">
+        <Layout title="Projects" hasTopBanner={false}>
+            <Container>
                 <h1>Projects</h1>
-            </div>
+            </Container>
 
-            <div className="spacer" style={{ height: "20px" }}></div>
-
-            <section className="container">
+            <Container>
                 {projects.length ? (
-                    <div className="projects-grid-cards">{get_projects_as_cards()}</div>
+                    <Grid container spacing={{ xs: 2, sm: 2, md: 2, lg: 2 }} columns={{ xs: 1, sm: 1, md: 10, lg: 10 }}>
+                        {get_projects_as_cards()}
+                    </Grid>
                 ) : (
                     <div>Woops! It looks like there are no projects...</div>
                 )}
-            </section>
-
-            <div className="spacer" style={{ height: "20px" }}></div>
+            </Container>
         </Layout>
     );
 };

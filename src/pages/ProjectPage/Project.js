@@ -33,7 +33,7 @@ const ProjectPage = () => {
     };
 
     return (
-        <Layout title="Project">
+        <Layout title={bannerDetails.title} hasTopBanner={true}>
             <BannerWithBgTitleAndDescription imgSrc={bannerDetails.imgSrc} title={bannerDetails.title} />
 
             <div className="container">
@@ -84,8 +84,9 @@ const ProjectPage = () => {
                             <section>
                                 <h2>App Captures</h2>
                                 <div className="app-captures gallery">
-                                    {projectDetails.projectCaptures.map((capture) => (
+                                    {projectDetails.projectCaptures.map((capture, index) => (
                                         <ModalImage
+                                            key={`capture${index+1}`}
                                             className="item"
                                             small={urlForImage(capture)}
                                             large={urlForImage(capture)}
