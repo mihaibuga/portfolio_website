@@ -21,7 +21,6 @@ const Footer = () => {
     const [portfolioTitle, setPortfolioTitle] = React.useState("Portfolio Website");
     const [email, setEmail] = React.useState();
     const [linkedInDetails, setLinkedinDetails] = React.useState();
-    const [isLinkedInDeclared, setIsLinkedInDeclared] = React.useState(false);
     const [versionControlProfileUrl, setVersionControlProfileUrl] = React.useState();
 
     React.useEffect(() => {
@@ -34,7 +33,6 @@ const Footer = () => {
             const isLinkedInStored = storeProfileData.socialLinks.some(
                 (socialLink) => socialLink.platform.title.toLowerCase() === "linkedin"
             );
-            setIsLinkedInDeclared(isLinkedInStored);
             setLinkedinDetails(
                 isLinkedInStored &&
                     storeProfileData.socialLinks.find(

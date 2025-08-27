@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { alpha, styled } from "@mui/material/styles";
 
-import { AppBar, Box, Container, Drawer, IconButton, Tab, Tabs, Toolbar, tabsClasses } from "@mui/material";
+import { AppBar, Box, Container, Drawer, IconButton, Tab, Tabs, Toolbar } from "@mui/material";
 
 import { CloseRounded as CloseRoundedIcon, Menu as MenuIcon } from "@mui/icons-material";
 
