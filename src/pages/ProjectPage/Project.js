@@ -4,6 +4,8 @@ import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { IoMdGitBranch } from "react-icons/io";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import ModalImage from "react-modal-image";
+import parse from 'html-react-parser';
+
 import Layout from "../../layouts/Layout";
 import * as ROUTES from "../../routes/routes";
 import LinkButtonWithIcon from "../../components/LinkButtonWithIcon/LinkButtonWithIcon";
@@ -54,7 +56,7 @@ const ProjectPage = () => {
                         {projectDetails?.description && (
                             <section>
                                 <h2>Description</h2>
-                                <p>{projectDetails.description}</p>
+                                <div>{parse(projectDetails.description)}</div>
                             </section>
                         )}
 
