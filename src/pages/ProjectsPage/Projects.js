@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 import Layout from "../../layouts/Layout";
 import "./projects.scss";
-import ProjectCardV2 from "../../components/ProjectCardV2/ProjectCardV2";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import useDataStore from "../../store/dataStore";
 import { useFetchProjectsData } from "../../utils/hooks";
 
@@ -17,11 +17,12 @@ const Projects = () => {
     useEffect(() => {
         if (storeProjects !== null && typeof storeProjects === "object") {
             setProjects(storeProjects);
+            console.log(storeProjects);
         }
     }, [storeProjects]);
 
     const get_projects_as_cards = () => {
-        return projects?.map((project) => <ProjectCardV2 key={project._id} projectDetails={project} />);
+        return projects?.map((project) => <ProjectCard key={project._id} projectDetails={project} />);
     };
 
     return (
@@ -32,7 +33,9 @@ const Projects = () => {
 
             <Container>
                 {projects.length ? (
-                    <div className="projects-grid-cards">{get_projects_as_cards()}</div>
+                    <Grid container spacing={{ xs: 2, sm: 2, md: 2, lg: 2 }} columns={{ xs: 1, sm: 1, md: 10, lg: 10 }}>
+                        {get_projects_as_cards()}
+                    </Grid>
                 ) : (
                     <div>Woops! It looks like there are no projects...</div>
                 )}
